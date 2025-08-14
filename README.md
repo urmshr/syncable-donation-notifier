@@ -4,4 +4,4 @@ Syncableにおける寄付を通知するメールを処理し、Slackワーク�
 
 ## ライセンス
 
-MIT License
+This software is [MIT licensed](LICENSE).
