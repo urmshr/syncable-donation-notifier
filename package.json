@@ -1,0 +1,50 @@
+{
+  "name": "syncable-donation-notifier",
+  "version": "1.0.0",
+  "description": "Google Apps Script application to process Syncable donation notifications and send them to Slack and Google Sheets",
+  "main": "dist/main.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@google/clasp": "^2.4.2",
+    "@types/google-apps-script": "^1.0.98",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5",
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc && cp appsscript.json dist/",
+    "deploy": "npm run build && clasp push",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "precommit": "npm run lint && npm run format:check",
+    "setup": "clasp login && clasp create --type standalone --title \"Syncable Donation Notifier\"",
+    "watch": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/urmshr/syncable-donation-notifier.git"
+  },
+  "keywords": [
+    "google-apps-script",
+    "syncable",
+    "donation",
+    "slack",
+    "googlesheets",
+    "typescript",
+    "automation"
+  ],
+  "author": "urmshr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/urmshr/syncable-donation-notifier/issues"
+  },
+  "homepage": "https://github.com/urmshr/syncable-donation-notifier#readme"
+}
