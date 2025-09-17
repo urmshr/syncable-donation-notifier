@@ -73,7 +73,7 @@ class ConfigService {
 // Gmail サービス
 class GmailService {
   private static readonly SEARCH_QUERY =
-    'subject:"【Syncable】新規の寄付を受け付けました。" is:unread';
+    'subject:"【Syncable】新規の支援を受け付けました。" is:unread';
 
   public static processNewDonations(
     onDonationFound: (details: DonationDetails, messageId: string) => void
@@ -97,10 +97,10 @@ class GmailService {
 
   private static extractDonationDetails(body: string): DonationDetails | null {
     const patterns = {
-      date: /寄付受付日時:\s*(.+)/,
-      name: /寄付者名:\s*(.+)/,
-      amount: /寄付金額:\s*([\d,]+)\s*円/,
-      frequency: /寄付頻度:\s*(.+)/,
+      date: /支援受付日時:\s*(.+)/,
+      name: /支援付者名:\s*(.+)/,
+      amount: /支援金額:\s*([\d,]+)\s*円/,
+      frequency: /支援頻度:\s*(.+)/,
     };
 
     const matches = {
