@@ -1,7 +1,7 @@
 # Syncable Donation Notifier
 
-Syncableにおける寄付を通知するメールを処理し、Slackワークフローへの通知及びGoogleスプレッドシートへの記録を行なうGoogle Apps Script プロジェクトです。
+Syncableからの寄付通知メールを処理して、Slackワークフローへの通知およびGoogleスプレッドシートへの記録を行なうGoogle Apps Script プロジェクトです。
 
 ## ライセンス
 
-This software is [MIT licensed](LICENSE).
+このソフトウェアは[MIT license](LICENSE)の下でライセンスされています。
